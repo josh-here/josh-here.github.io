@@ -62,7 +62,7 @@
 /* Use the Color Scheme */
 body {
 	color: var(--text-color);
-	background-color: var(--background-color);
+	background: var(--background-color) !important;
 }
 
 /***Styles***/
