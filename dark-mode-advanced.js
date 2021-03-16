@@ -55,9 +55,9 @@ const setColorMode = (mode) => {
 }
 
 
+window.onload=function(){
 
-
-document.getElementById('force-color-mode-to-light').addEventListener('click', (e) => {
+document.querySelector('#force-color-mode-to-light').addEventListener('click', (e) => {
 	setColorMode('light');
 });
 
@@ -69,7 +69,7 @@ document.querySelector('#auto-color-mode').addEventListener('click', (e) => {
 	setColorMode(false);
 });
 
-
+}
 
 
 
