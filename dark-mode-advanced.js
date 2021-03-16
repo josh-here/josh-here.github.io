@@ -2,6 +2,7 @@
  * Adjusted version of https://codepen.io/bramus/pen/jObmydd
  * Demo for https://www.bram.us/2020/04/26/the-quest-for-the-perfect-dark-mode-using-vanilla-javascript/
  */
+Cookies.set("key", "value");
 
 const setColorMode = (mode) => {
 	// Mode was given
