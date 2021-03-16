@@ -75,11 +75,11 @@ document.querySelector('#auto-color-mode').addEventListener('click', (e) => {
 
 // FOR TOGGLE
 
-
+window.onload=function(){
 document.querySelector('#toggle-darkmode').addEventListener('click', (e) => {
 	setColorMode(e.target.checked ? 'dark' : 'light');
 });
-
+}
 // Keep an eye out for System Light/Dark Mode Changes
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 mediaQuery.addListener(() => {
