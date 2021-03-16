@@ -83,3 +83,4 @@ mediaQuery.addListener(() => {
 	// Make sure the checkbox is up-to-date
  	document.querySelector('#toggle-darkmode').checked = mediaQuery.matches;
 });
+
