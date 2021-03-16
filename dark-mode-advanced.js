@@ -10,7 +10,7 @@ const setColorMode = (mode) => {
 		document.documentElement.setAttribute('data-force-color-mode', mode);
 		// Persist in local storage
 		/**window.**/localStorage.setItem('color-mode', mode);
-        Cookies.set('color-mode', mode);
+        Cookies.set('color-mode', mode, { expires:Infinity });
 		// Make sure correct radio button is up-to-date
 		document.querySelector('#force-color-mode-to-dark').checked = (mode === 'dark');
 		document.querySelector('#force-color-mode-to-light').checked = (mode === 'light');
