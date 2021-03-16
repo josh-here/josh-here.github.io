@@ -1,0 +1,104 @@
+/* This supports users with JS disabled. */
+@media (prefers-color-scheme: dark) {
+    :root {
+      --color: white;
+      --background: black;
+      --border: #525252;
+    }
+  }
+  
+  /* This supports users with JS disabled. */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color: black;
+      --background: white;
+      --border: #e0e0e0;
+    }
+  }
+  
+  /* Styles for when light mode is enabled. */
+  .pdm-light {
+    --color: black;
+    --background: white;
+    --border: #e0e0e0;
+  }
+  
+  /* Styles for when dark mode is enabled. */
+  .pdm-dark {
+    --color: white;
+    --background: black;
+    --border: #525252;
+  }
+  
+  /* Default color and background. */
+  /* If you add a color or background on other components (e.g. body or some custom Button) */
+  /* that will override these. You will need to change those styles to use these CSS variables. */
+  :root {
+    color: var(--color);
+    background: var(--background);
+  }
+  
+  
+  /* HIDE RADIO */
+  [type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  
+  /* IMAGE STYLES */
+  .dark, .light, .auto {
+    cursor: pointer;
+    border-radius: 10px;
+    border: .5px solid var(--border);
+  }
+  
+  
+  div {
+    display: inline-block;
+  }
+  
+  
+  
+  .dark-container{
+    margin: 12px;
+  }
+  
+  .light-container{
+    margin: 12px;
+  }
+  
+  .auto-container{
+    margin: 12px;
+  }
+  
+  
+  
+  #dark > input:checked + .dark{
+    box-shadow: 
+    0 0 0 1.5px var(--border),
+      0 0 0 6px var(--background),
+      0 0 0 10px #0c8;
+  }
+  
+  
+  
+  
+  #light > input:checked + .light{
+    box-shadow: 
+    0 0 0 1.5px var(--border),
+      0 0 0 6px var(--background),
+      0 0 0 10px #0c8;
+  }
+  
+  
+  
+  
+  #auto > input:checked + .auto{
+    box-shadow: 
+    0 0 0 1.5px var(--border),
+      0 0 0 6px var(--background),
+      0 0 0 10px #0c8;
+  }
