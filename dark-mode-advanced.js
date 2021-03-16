@@ -50,7 +50,7 @@ const setColorMode = (mode) => {
 
 
 
-document.querySelector('#force-color-mode-to-light').addEventListener('click', (e) => {
+document.getElementById('force-color-mode-to-light').addEventListener('click', (e) => {
 	setColorMode('light');
 });
 
