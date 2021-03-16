@@ -9,19 +9,40 @@
 
 
 
+/******
+
+
+PRIMARY COLOR ========   BLUE   ===    #3596ff  ;
+
+SECONDARY COLOR =======  INDIGO   ===  #6366F1   ;
+
+TERTIARY COLOR =======   ROSE   ===   #f43f5e  ;
+
+
+
+****************/
+
+
+
+
 
    /***Color-Variables***/
 
 
 /* Light Color Scheme */
 :root,
-:root[data-force-color-mode="light"] {
+:root[data-color-mode="light"] {
 	color-scheme: light dark;
 	--text-color: #000;
 	--background-color: #fff;
 	--link-color: #00f;
     --border: #e0e0e0;
-    --primary-color: #3596ff;
+    
+/******Change HERE ******/
+
+  --primary-color: #3596ff;
+  --secondary-color: #6366F1;
+  --tertiary-color: #f43f5e;
 }
 
 /* Dark Color Scheme */
@@ -31,16 +52,99 @@
 		--background-color: #333;
 		--link-color: #2196f3;
     --border: #525252;
-    --primary-color: #3596ff;
+    
+/******Change HERE ******/
+
+  --primary-color: #61aeff;
+  --secondary-color: #8e8fee;
+  --tertiary-color: #ff758c;
 	}
 }
-:root[data-force-color-mode="dark"] {
+:root[data-color-mode="dark"] {
 	--text-color: #fff;
 	--background-color: #333;
 	--link-color: #2196f3;
   --border: #525252;
-  --primary-color: #3596ff;
+
+/******Change HERE ******/
+
+--primary-color: #61aeff;
+--secondary-color: #8e8fee;
+--tertiary-color: #ff758c;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-radios div {
+  display: inline-block;
+}
+.custom-radios input[type="radio"] {
+  display: none;
+}
+.custom-radios input[type="radio"] + label {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.custom-radios input[type="radio"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 44px;
+}
+.custom-radios input[type="radio"] + label span img {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+
+
+/********* EDIT HERE **********/
+
+/********Accent Radio Buttons **********/
+
+
+
+.custom-radios input[type="radio"]#color-1 + label span {
+  background-color: var(--primary-color);
+}
+.custom-radios input[type="radio"]#color-2 + label span {
+  background-color: var(--secondary-color);
+}
+.custom-radios input[type="radio"]#color-3 + label span {
+  background-color: var(--tertiary-color);
+}
+
+.custom-radios input[type="radio"]:checked + label span img {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -99,49 +203,7 @@ body {
         align-items: center;
         background-color: #222;
    }
-    .custom-radios div {
-        display: inline-block;
-   }
-    .custom-radios input[type="radio"] {
-        display: none;
-   }
-    .custom-radios input[type="radio"] + label {
-        color: #333;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-   }
-    .custom-radios input[type="radio"] + label span {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        margin: -1px 4px 0 0;
-        vertical-align: middle;
-        cursor: pointer;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-        background-repeat: no-repeat;
-        background-position: center;
-        text-align: center;
-        line-height: 44px;
-   }
-    .custom-radios input[type="radio"] + label span img {
-        opacity: 0;
-        transition: all 0.3s ease;
-   }
-    .custom-radios input[type="radio"]#color-1 + label span {
-        background-color: #3596FF;
-   }
-    .custom-radios input[type="radio"]#color-2 + label span {
-        background-color: #6366F1;
-   }
-    .custom-radios input[type="radio"]#color-3 + label span {
-        background-color: #F43F5E;
-   }
 
-    .custom-radios input[type="radio"]:checked + label span img {
-        opacity: 1;
-   }
     
 
 
@@ -241,12 +303,6 @@ div {
   0 0 0 6px var(--background-color),
   0 0 0 10px #0c8;
 }
-
-
-
-
-
-
 
 
 

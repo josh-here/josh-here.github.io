@@ -8,7 +8,7 @@ const setColorMode = (mode) => {
 	// Mode was given
 	if (mode) {
 		// Update data-* attr on html
-		document.documentElement.setAttribute('data-force-color-mode', mode);
+		document.documentElement.setAttribute('data-color-mode', mode);
 		// Persist in local storage
 		window.localStorage.setItem('color-mode', mode);
         //Cookies.set('color-mode', mode);
@@ -30,7 +30,7 @@ const setColorMode = (mode) => {
 	// No mode given (e.g. auto)
 	else {
 		// Remove data-* attr from html
-		document.documentElement.removeAttribute('data-force-color-mode');
+		document.documentElement.removeAttribute('data-color-mode');
 		// Remove entry from local storage
 		window.localStorage.removeItem('color-mode');
 		//Cookies.expire('color-mode');
@@ -78,7 +78,7 @@ document.querySelector('#toggle-darkmode').addEventListener('click', (e) => {
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 mediaQuery.addListener(() => {
 	// Ignore change if there's an override set
-	if (document.documentElement.getAttribute('data-force-color-mode')) {
+	if (document.documentElement.getAttribute('data-color-mode')) {
 		return;
 	}
 

@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Cookies.js/1.2.1/cookies.min.js"></script>
     <script src="jquery.cookie.js"></script>
     <script src="app.js" type="text/javascript"></script>
-
+     
     
 
     <script>
@@ -19,7 +19,7 @@
       const colorModeOverride = window.localStorage.getItem('color-mode');
       const hasColorModeOverride = typeof colorModeOverride === 'string';
       if (hasColorModeOverride) {
-        document.documentElement.setAttribute('data-force-color-mode', colorModeOverride);
+        document.documentElement.setAttribute('data-color-mode', colorModeOverride);
       }
     </script>
 
@@ -30,12 +30,24 @@
         }
     </script>
 
-    
+
+<style>
+  *{
+    transition: 0.3s ease all;
+  }
+  p,h1,h2,h3,h4,h5,h6,pre,span,a{
+    transition: 0.045s ease all;
+  }
+</style>
+
+
+
 
 </head>
 
 <body>
     
+  <h1>HI</h1><p>HI</p>
 
     <div class="custom-radios">
      
@@ -185,13 +197,18 @@
       
       <br>
       
-      <input type="checkbox" id="toggle-darkmode" />
+      <input onclick="playSound()" type="checkbox" id="toggle-darkmode" />
         <label for="toggle-darkmode"><span>Toggle Light/Dark Mode</span></label>
-      
-      
+        <audio src="switch-on.mp3" id="js-sound-on" preload="auto" hidden></audio>
+<script>
+  
+function playSound() {
 
-
-
+var soundon = document.getElementById("js-sound-on");
+soundon.play();
+}
+playSound();
+</script>
 
      
 
