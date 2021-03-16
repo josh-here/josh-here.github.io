@@ -2,7 +2,8 @@ $(document).ready(function(){
 
     // ==============
     // theme switcher
-
+    Cookies.set('name', 'value', { expires: Infinity });
+    
 
     // Original : http://jamesmathias.com/blog/article/switching-styles-silently-in-six-steps
     // ==============
