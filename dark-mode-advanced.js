@@ -3,14 +3,17 @@
  * Demo for https://www.bram.us/2020/04/26/the-quest-for-the-perfect-dark-mode-using-vanilla-javascript/
  */
 Cookies.set("key", "value");
-
+window.localStorage.setItem('hie', "hi");
 const setColorMode = (mode) => {
 	// Mode was given
 	if (mode) {
 		// Update data-* attr on html
 		document.documentElement.setAttribute('data-force-color-mode', mode);
 		// Persist in local storage
-		window.localStorage.setItem('color-mode', mode);
+		//window.localStorage.setItem('color-mode', mode);
+		
+		Cookies.set('color-mode', mode);
+		
 
 		// Make sure correct radio button is up-to-date
 		document.querySelector('#force-color-mode-to-dark').checked = (mode === 'dark');
@@ -32,7 +35,11 @@ const setColorMode = (mode) => {
 		// Remove data-* attr from html
 		document.documentElement.removeAttribute('data-force-color-mode');
 		// Remove entry from local storage
-		window.localStorage.removeItem('color-mode');
+		//window.localStorage.removeItem('color-mode');
+		
+		
+		Cookies.expire('color-mode');
+		
 		// Make sure the checkbox is up-to-date, matching the system preferences
 		document.querySelector('#auto-color-mode').checked = true;
     
