@@ -10,9 +10,9 @@ const setColorMode = (mode) => {
 		// Update data-* attr on html
 		document.documentElement.setAttribute('data-force-color-mode', mode);
 		// Persist in local storage
-		//window.localStorage.setItem('color-mode', mode);
+		window.localStorage.setItem('color-mode', mode);
 		
-		Cookies.set('color-mode', mode);
+		//Cookies.set('color-mode', mode);
 		
 
 		// Make sure correct radio button is up-to-date
@@ -35,10 +35,10 @@ const setColorMode = (mode) => {
 		// Remove data-* attr from html
 		document.documentElement.removeAttribute('data-force-color-mode');
 		// Remove entry from local storage
-		//window.localStorage.removeItem('color-mode');
+		window.localStorage.removeItem('color-mode');
 		
 		
-		Cookies.expire('color-mode');
+		//Cookies.expire('color-mode');
 		
 		// Make sure the checkbox is up-to-date, matching the system preferences
 		document.querySelector('#auto-color-mode').checked = true;
