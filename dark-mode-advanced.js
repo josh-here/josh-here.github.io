@@ -1,3 +1,37 @@
+ // Check if there's any override. If so, let the markup know by setting an attribute on the <html> element
+ const colorModeOverride = window.localStorage.getItem('color-mode');
+ const hasColorModeOverride = typeof colorModeOverride === 'string';
+ if (hasColorModeOverride) {
+   document.documentElement.setAttribute('data-color-mode', colorModeOverride);
+ }
+
+
+
+
+
+
+// Check the dark-mode checkbox if
+      // - The override is set to dark
+      // - No override is set but the system prefers dark mode
+      if ((colorModeOverride == 'dark') || (!hasColorModeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('#toggle-darkmode').checked = true;
+      }
+    
+    
+    
+    // Make sure correct checkbox is checked on load
+    if (hasColorModeOverride) {
+      if (colorModeOverride == 'dark') {
+        document.querySelector('#force-color-mode-to-dark').checked = true;
+      } else {
+        document.querySelector('#force-color-mode-to-light').checked = true;
+      }
+    }
+
+
+
+
+
 /*
  * Adjusted version of https://codepen.io/bramus/pen/jObmydd
  * Demo for https://www.bram.us/2020/04/26/the-quest-for-the-perfect-dark-mode-using-vanilla-javascript/
