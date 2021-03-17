@@ -22,6 +22,25 @@
         document.documentElement.setAttribute('data-color-mode', colorModeOverride);
       }
     </script>
+    <script>
+          // Check the dark-mode checkbox if
+            // - The override is set to dark
+            // - No override is set but the system prefers dark mode
+            if ((colorModeOverride == 'dark') || (!hasColorModeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+              document.querySelector('#toggle-darkmode').checked = true;
+            }
+          
+          
+          
+          // Make sure correct checkbox is checked on load
+          if (hasColorModeOverride) {
+            if (colorModeOverride == 'dark') {
+              document.querySelector('#force-color-mode-to-dark').checked = true;
+            } else {
+              document.querySelector('#force-color-mode-to-light').checked = true;
+            }
+          }
+        </script>
 
 
     <script type="text/javascript">
@@ -224,25 +243,6 @@ soundon.play();
 
       
 
-        <script>
-          // Check the dark-mode checkbox if
-            // - The override is set to dark
-            // - No override is set but the system prefers dark mode
-            if ((colorModeOverride == 'dark') || (!hasColorModeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-              document.querySelector('#toggle-darkmode').checked = true;
-            }
-          
-          
-          
-          // Make sure correct checkbox is checked on load
-          if (hasColorModeOverride) {
-            if (colorModeOverride == 'dark') {
-              document.querySelector('#force-color-mode-to-dark').checked = true;
-            } else {
-              document.querySelector('#force-color-mode-to-light').checked = true;
-            }
-          }
-        </script>
 
 
 
