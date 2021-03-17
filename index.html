@@ -40,7 +40,16 @@
   }
 </style>
 
-
+<style type="text/css">
+    .hidden {display:none;}
+  </style>
+    
+    <script type="text/javascript">
+    $('html').addClass('hidden');
+    $(document).ready(function() {    // EDIT: From Adam Zerner's comment below: Rather use load: $(window).on('load', function () {...});
+      $('html').show();  // EDIT: Can also use $('html').removeClass('hidden'); 
+     });  
+   </script>
 
 
 </head>
