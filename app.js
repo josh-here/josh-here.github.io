@@ -70,6 +70,79 @@ $(document).ready(function(){
 
 
 
+///JQUERY.KEY.JS
+
+
+$.key('ctrl+alt+l', function() {
+    $("#force-color-mode-to-light").click();
+});
+
+
+
+
+
+$.key('ctrl+alt+d', function() {
+    $("#force-color-mode-to-dark").click();
+});
+
+
+
+
+
+
+$.key('ctrl+alt+a', function() {
+    $("#auto-color-mode").click();
+});
+
+
+
+$.key('ctrl+alt+q', function() {
+    $("#toggle-darkmode").click();
+});
+
+
+
+
+
+///MOUSETRAP.JS
+
+
+
+
+
+Mousetrap.bind(['mod+alt+l'], function() {     document.getElementById("#force-color-mode-to-light").click();
+return false
+    });
+
+
+
+
+Mousetrap.bind(['mod+alt+d'], function() {     document.getElementById("#force-color-mode-to-dark").click();
+return false
+    });
+
+
+
+
+
+
+Mousetrap.bind(['mod+alt+a'], function() {     document.getElementById("#auto-color-mode").click();
+return false
+    });
+
+
+
+
+Mousetrap.bind(['alt+t'], function() {     document.getElementById("toggle-darkmode").click();
+return false
+    }, 'keyup');
+
+
+
+
+
+
+
 
 
 
