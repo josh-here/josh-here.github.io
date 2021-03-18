@@ -110,14 +110,14 @@ $.key('ctrl+alt+q', function() {
 
 
 
-Mousetrap.bind(['mod+alt+l'], function() {     document.getElementById("#force-color-mode-to-light").click();
+Mousetrap.bind(['mod+shiift+l'], function() {     document.getElementById("#force-color-mode-to-light").click();
 return false
     });
 
 
 
 
-Mousetrap.bind(['mod+alt+d'], function() {     document.getElementById("#force-color-mode-to-dark").click();
+Mousetrap.bind(['mod+shiift+d'], function() {     document.getElementById("#force-color-mode-to-dark").click();
 return false
     });
 
@@ -126,7 +126,7 @@ return false
 
 
 
-Mousetrap.bind(['mod+alt+a'], function() {     document.getElementById("#auto-color-mode").click();
+Mousetrap.bind(['mod+shiift+a'], function() {     document.getElementById("#auto-color-mode").click();
 return false
     });
 
